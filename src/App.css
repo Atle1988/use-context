@@ -1,38 +1,252 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  color: tomato;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  
+ 
+}
+/* Stroke Style */
+.whiteStroke{
+  -webkit-text-stroke: 1px white;
+  font-size: 42px
+}
+
+/* Title div pos */
+.sectoin-title{
+  position: relative;
+  margin-top: 50px;
+  left: 370px;
+  
+  width: max-content;
+  text-align: start;
+}
+
+/* orderBtn if item is in store */
+.orderBtn{
+background-color: #666 ;
+color: lime;
+font-weight: 900;
+border: 2px solid tomato;
+}
+
+/* the store is displayed inside this grid */
+.section-grid{
+  width: 320px;
+  position: relative;
+  left: 25px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+
+}
+
+
+
+/* The Big TOTAL SUM  */
+.totalSumAqua{
+  position: relative;
+
+  left: 2px;
+  width: 310px;
+  border-radius: 5px;
+  font-size: 28px;
+ 
+}
+
+/* The shopping card style */
+.shop-card{
+  width: 300px;
+  border-radius: 5px 70px 5px 70px;
+  border: 3px solid tomato;
+  margin: 5px;
+  color: #666;
+  background: lightgray;
+}
+
+.shop-card-id{
+
+ 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 5px;
+
+  min-height: 200px;
+
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+footer{
+  position: relative;
+  margin-top: 10px;
+}
+
+.shop-card-section-left{
+  width: 100%;
+  
+  margin-bottom: 20px;
+  padding: 20px;
+  min-height: 200px;
+  max-height: 150px;
+  overflow: auto;
+}
+.shop-card-section-right{
+  
+  background: #FFFFFF;
+  position: relative;
+  height: 110px;
+  
+  padding: 5px;
+}
+.shop-card-section-price{
+  margin-bottom: 20px;
+}
+.shop-card-img{
+  width: 110px;
+ height: stretch;
+  object-fit: contain;
+}
+.shop-card-section-footer> button{
+  position: relative;
+  margin-left: 10px;
+  
+}
+
+button{
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop-card-section-footer{ 
+  position: relative;
+
+}
+
+
+
+.totalSum{
+  position: absolute;
+  top: 100px;
+  left:220px;
+}
+
+/* The Shopping List */
+.section-checkOut{
+ position: relative;
+ top: 10px;
+ color: tomato;
+ height: 105%;
+ background-color: rgba(102, 102, 102, 0.426);
+ border-radius: 10px;
+
+ border: 3px solid tomato;
+ width: 320px;
+
+
+
+ 
+}
+
+
+.buyOutBtn{
+  position:absolute;
+  top: -50px;
+}
+.counter-item-store{
+  position:absolute;
+  top: -20px;
+  left: 200px;
+}
+.toggle-show-hide-btn{
+  
+  position:absolute;
+  top: 34px;
+  left: 0;
+  border-radius:20px;
+  width: 315px;
+  background-color: tomato;
+  border: none;
+  color: white;
+  font-weight: 900;
+  
+  
+}
+
+.buyOut-card{
+  position: relative;
+  top:30px;
+  left: 2px;
+  width: 310px;
+  height: 95px;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  color: #D3D3D3;
+ 
+}
+small{
+  color:tomato;
+  margin-left: 5px;
+}
+
+.buyOut-flex{
+  display: flex;
+  align-items: center;
+  width: 305px;
+  padding: 5px;
+  justify-content: space-between;
+
+ 
+}
+.buyOut-title{
+  width: 300px;
+}
+.delete-btn{
+  border: none;
+  background: tomato;
+  color: white;
+  width: 310px;
+  position: relative;
+  left: -2px;
+}
+
+.no-item{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  
+ 
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* MEDIA -----> */
+@media screen and (max-width: 992px) {
+  .section-grid{
+    position:absolute;
+    grid-template-columns: auto;
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  .shop-card{
+    margin-left: 324px;
+ 
   }
+
+  .toggle-show-hide-btn, .delete-btn{
+    z-index: 1;
+  }
+ 
 }
